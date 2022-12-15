@@ -1,18 +1,63 @@
-.navbar{
+.navbar-container{
+    width: 100%;
+    height: 10vh;
     display: flex;
-    background-color: grey;
     justify-content: space-between;
+    box-shadow: 10px 0px 10px 1px #7F669D;
+    
 }
 
- .logo-navbar{
-    width: 100px;
-    margin: 10%;
- }
 
-.navbar-button button{
-    padding: 10px;
-    margin: 10px;
-    background-color: lightblue;
-    border-radius: 7px;
-    margin-top: 30px;
+.container-logo{
+    width: 10%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navbar{
+    width: 70%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo-navbar{
+    color: #7F669D;
+}
+
+
+.navbar-item{
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 7px 10px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #7F669D;
+    font-weight: bold;
+}
+
+.container-cart{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.counter-cart{
+    position: absolute;
+    top: 4%;
+    right: 35%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
