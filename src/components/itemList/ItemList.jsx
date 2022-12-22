@@ -2,7 +2,7 @@ import React from "react"
 import Item from "../item/Item"
 import "./ItemList.css"
 
-const ItemList = ({ items }) => {
+export const ItemList = ({ items }) => {
   return (
     <div className="container-cards">
       {items.map((element) => {
@@ -11,5 +11,3 @@ const ItemList = ({ items }) => {
     </div>
   )
 }
-
-export default ItemList

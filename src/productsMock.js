@@ -51,7 +51,7 @@ export const products = [
         price: 888200,
         stock: 27,
         description: "Para Volvo C30 S40 V50 2.4 L 5 cilindros 2004-2010.",
-        category: "urbanas",
+        category: "autopartes-motos",
         img: "https://res.cloudinary.com/dtrk5cfbd/image/upload/v1670893974/RJ%20-%20Comision%2034635%20-%20JCA/41B-nn_no_L._AC_SX466_PIbundle-5_TopRight_0_0_SH20__imgsag.jpg",
     },
 

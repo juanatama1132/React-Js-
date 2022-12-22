@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react"
 
 import "./ItemListContainer.css"
-
 import { products } from "../../productsMock"
-
-import ItemList from "../itemList/ItemList"
+import { ItemList } from "../itemList/ItemList"
 
 import { useParams } from "react-router-dom"
 
-const ItemListContainer = () => {
+export const ItemListContainer = () => {
   const { categoryName } = useParams()
 
   const [items, setItems] = useState([])
@@ -18,13 +16,13 @@ const ItemListContainer = () => {
       (productos) => productos.category === categoryName
     )
 
-    const getProducts = new Promise((resolve, reject) => {
+    const task = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(categoryName ? productosFiltered : products)
       }, 500)
     })
 
-    getProducts
+    task
       .then((res) => {
         setItems(res)
       })
@@ -35,11 +33,8 @@ const ItemListContainer = () => {
   }, [categoryName])
 
   return (
-    <div className="light">
-      
+    <div>
       <ItemList items={items} />
     </div>
   )
 }
-
-export default ItemListContainer
