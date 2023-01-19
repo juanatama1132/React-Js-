@@ -1,7 +1,6 @@
 import { CartWidget } from '../cartwidget/CartWidget'
 import './NavBar.css'
 import {Link} from "react-router-dom"
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
 export const NavBar = ()=>{
