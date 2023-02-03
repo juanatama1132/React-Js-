@@ -1,0 +1,12 @@
+.NavBar{
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+.navbar_logo img{
+    width: 150px;
+    margin: 5px;
+}

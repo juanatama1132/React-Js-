@@ -1,7 +1,8 @@
 import { useContext, useEffect } from "react"
 import { CartContext } from "../context/CartContext"
+import swal from "sweetalert2"
 import "./Cart.css"
-import { CartItem } from "../cartItem/Cartltem"
+import { CartItem } from "../cartItem/CartItem"
 import { Button } from "@mui/material"
 import { NoInfo } from "../noInfo/NoInfo"
 import { Form } from "../form/Form"
@@ -12,7 +13,7 @@ import { db } from "../../firebaseConfig"
 import { Orders } from "../orders/Orders"
 
 export const Cart = () => {
-  const { cart, clearCart, getTotalPrice } = useContext(CartContext)
+  const { cart, clearCart, getTotalPrice, countProducts } = useContext(CartContext)
 
   const [buy, setBuy] = useState(false)
   const [orderId, setOrderId] = useState(null)
@@ -66,7 +67,10 @@ export const Cart = () => {
       <div className="cart-info">
         <h2>Descripcion del carrito</h2>
         <h3>
-          Precio total: {getTotalPrice() > 0 ? getTotalPrice() : "No hay items"}
+          Cantidad de productos: {countProducts() > 0 ? countProducts() : "No hay productos"}
+        </h3>
+        <h3>
+          Precio total:$ {getTotalPrice() > 0 ? getTotalPrice() : "No hay productos"}
         </h3>
 
         {buy ? (

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./ItemDetail.css"
 import { useParams } from "react-router-dom"
 import Card from '@mui/material/Card';
@@ -50,4 +50,3 @@ export const ItemDetail = ( { product } ) => {
     </div>
   )
 }
-export default ItemDetail

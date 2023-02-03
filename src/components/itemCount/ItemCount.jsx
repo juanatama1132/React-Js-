@@ -39,4 +39,3 @@ export const ItemCount = ({ stock, initial = 0, onAdd }) => {
     </div>
   )
 }
-export default ItemCount
